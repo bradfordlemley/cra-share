@@ -1,9 +1,9 @@
 ### TLDR;
-This repo demonstrates a proposal for a way to share source between apps.
+This repo demonstrates a proposal for a way to share source between create-react-app apps.
 
-This requires a new feature in create-react-app.
+This requires a new feature in create-react-app called "srcPaths".
 
-Fork with this feature: https://github.com/bradfordlemley/create-react-app/tree/feature-srcPaths
+This feature is implemented here: https://github.com/bradfordlemley/create-react-app/tree/feature-srcPaths
 
 ### Proposal
 There are many reasons for sharing code between different apps, but it is currently difficult to achieve.
@@ -53,9 +53,6 @@ monorepo
   * This is to avoid confusion, to keep resolution something easy to reason about.
 * srcPaths *should* be relative ... but they don't really need to be.
 * Resolve order is same as order of srcPaths.
-
-### create-react-app with srcPaths support is available
-https://github.com/bradfordlemley/create-react-app/tree/feature-srcPaths
 
 #### Install create-react-app with srcPaths support
 1. git clone https://github.com/bradfordlemley/create-react-app
