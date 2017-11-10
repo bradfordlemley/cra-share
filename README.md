@@ -21,13 +21,13 @@ monorepo
  |--cra-app1
      |--package.json: srcPaths: [“../shared”]
      |--src
-       |--file1.js: import comp1 from ‘comp1’ ← ok!
-       |--file2.js: import comp1 from ‘../../shared/comp1’  ← naughty, fail!
+       |--file1.js: import comp1 from ‘comp1’ ← ok, shared/comp1
+       |--file2.js: import comp1 from ‘../../shared/comp1’  ← naughty, fails
   |--cra-app2
      |--package.json: srcPaths: [“../shared”]
      |--src
-       |--file1.js: import comp1 from ‘comp1’ ← ok!
-       |--file2.js: import comp1 from ‘../../shared/comp1’  ← naughty, fail!
+       |--file1.js: import comp1 from ‘comp1’ ← ok, shared/comp1
+       |--file2.js: import comp1 from ‘../../shared/comp1’  ← naughty, fails
   |--shared
     |--comp1
     |--comp2
