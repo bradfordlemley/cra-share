@@ -1,9 +1,14 @@
-### create-react-app Proposal: Source Sharing
+### TLDR;
+This repo demonstrates a proposal for a create-react-app feature that enables source to be shared between apps.
 
-Why:
-There are many reasons for sharing code between different apps, but it is currently difficult to achieve with Create-React-App.
+The create-react-app fork that supports this feature is here: https://github.com/bradfordlemley/create-react-app/tree/feature-srcPaths
 
-### Desired monorepo with shared source
+### Proposal: Source Sharing support in create-react-app
+
+### Why
+There are many reasons for sharing code between different apps, but it is currently difficult to achieve.
+
+#### Typical desired monorepo structure
 <pre>
 monorepo
   |--cra-app1
@@ -17,7 +22,7 @@ monorepo
     |--comp2
 </pre>
 
-### Proposal
+#### Proposal
 <pre>
 monorepo
  |--cra-app1
