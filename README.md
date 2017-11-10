@@ -1,5 +1,5 @@
 #### TLDR;
-This repo demonstrates a proposal for a source sharing feature in create-react-app.
+This repo demonstrates a proposal ([3436](http://github.com/facebookincubator/create-react-app/issues/3436)) for a source sharing feature in create-react-app.
 
 #### Desired monorepo structure
 <pre>
