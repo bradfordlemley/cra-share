@@ -1,5 +1,5 @@
 #### TLDR;
-This repo demonstrates a proposal for a way to share source between create-react-app apps.
+This repo demonstrates a proposal for a source sharing feature in create-react-app.
 
 #### Desired monorepo structure
 <pre>
