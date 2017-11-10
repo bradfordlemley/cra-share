@@ -1,14 +1,14 @@
 ### TLDR;
-This repo demonstrates a proposal for a create-react-app feature that enables source to be shared between apps.
+This repo demonstrates a proposal for a way to share source between apps.
 
-The create-react-app fork that supports this feature is here: https://github.com/bradfordlemley/create-react-app/tree/feature-srcPaths
+This requires a new feature in create-react-app.
 
-### Proposal: Source Sharing support in create-react-app
+Fork with this feature: https://github.com/bradfordlemley/create-react-app/tree/feature-srcPaths
 
-### Why
+### Proposal
 There are many reasons for sharing code between different apps, but it is currently difficult to achieve.
 
-#### Typical desired monorepo structure
+#### Desired monorepo structure
 <pre>
 monorepo
   |--cra-app1
@@ -48,6 +48,7 @@ monorepo
   * Transpiled using same config (.babelrc under srcPath is not honored)
   * Do not have their own dependencies (ie. do not have their own node_modules)
   * All dependencies must be included in app’s package.json / node_modules
+  * All tests are included
 * Overlapping srcPaths are not allowed, e.g. [“../shared”, “../shared/comp1”]
   * This is to avoid confusion, to keep resolution something easy to reason about.
 * srcPaths *should* be relative ... but they don't really need to be.
