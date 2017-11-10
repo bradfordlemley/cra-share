@@ -18,7 +18,7 @@ monorepo
 #### Proposal
 <pre>
 monorepo
- |--cra-app1
+  |--cra-app1
      |--package.json: srcPaths: [“../shared”]
      |--src
        |--file1.js: import comp1 from ‘comp1’ ← ok, shared/comp1
