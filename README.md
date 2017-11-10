@@ -78,8 +78,9 @@ monorepo
    1. npm start|test|build|anything else that you can normally do with a create-react-app
 
 #### Or...try using srcPaths in your own app
+Note: your app needs to be compatible with react-scripts v1.0.17, because this react-scripts w/ srcPaths support is forked from v1.0.17.
+
 1. Install react-scripts with srcPaths support as described above
-1. Important: this is forked from react-scripts v1.0.17, so app needs to be compatible with react-scripts v1.0.17.
 1. Open console at your app (create new app using standard create-react-app tool or use your existing app)
 1. npm link react-scripts <-- tell npm you want to use the modified react-scripts that was installed above
 
@@ -87,6 +88,7 @@ monorepo
 1. Add srcPaths to your package.json
 1. Put your shared modules in one of the srcPaths
 1. Import your shared modules from your app
+1. To revert to your app to use previous react-scripts version, run ```npm install``` in your app, that will wipe out the link to the react-scripts with srcPaths.
 
 #### Todo
 1. Update ModuleScopePlugin to handle srcPaths in same way it handles appSrc (fail if relative import outside srcPath)
