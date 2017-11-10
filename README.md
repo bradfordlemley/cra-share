@@ -54,12 +54,12 @@ monorepo
 * https://github.com/bradfordlemley/create-react-app/commit/709dc407e2855f5dbdd982bde19dc0141e0d8e7c
 
 #### Install react-scripts with srcPaths support
-1. ```git clone https://github.com/bradfordlemley/create-react-app```
-1. ```cd create-react-app```
-1. ```git checkout feature-srcPaths```
-1. ```cd packages/react-scripts```
-1. ```npm install```  <-- install react-scripts dependencies
-1. ```npm link```  <-- tell your npm that you might want to use this version of react-scripts somewhere
+1. git clone https://github.com/bradfordlemley/create-react-app
+1. cd create-react-app
+1. git checkout feature-srcPaths
+1. cd packages/react-scripts
+1. npm install  <-- install react-scripts dependencies
+1. npm link  <-- tell your npm that you might want to use this version of react-scripts somewhere
 
 #### Try this example
 1. Install react-scripts with srcPaths support as described above
@@ -83,7 +83,7 @@ monorepo
 1. Open console at your app (create new app using standard create-react-app tool or use your existing app)
 1. npm link react-scripts <-- tell npm you want to use the modified react-scripts that was installed above
 
-   If you run npm install again in your app, you need to run ```npm link react-scripts``` again as npm install will wipe out the link
+   If you run ```npm install``` again in your app, you need to run ```npm link react-scripts``` again as ```npm install``` will wipe out the link
 1. Add srcPaths to your package.json
 1. Put your shared modules in one of the srcPaths
 1. Import your shared modules from your app
