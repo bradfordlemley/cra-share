@@ -3,6 +3,7 @@ import logo from './logo.svg';
 import './App.css';
 
 import Foo1 from 'foo1';
+import Bar1 from 'bar1';
 
 class App extends Component {
   render() {
@@ -16,6 +17,7 @@ class App extends Component {
           To get started, edit <code>src/App.js</code> and save to reload.
         </p>
         <Foo1 food="carrots"/>
+        <Bar1 drink="margarita"/>
       </div>
     );
   }

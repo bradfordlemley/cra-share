@@ -3,7 +3,7 @@ import './foo1.css';
 
 const Foo1 = ({food}) =>
   <div className="foo1">
-    Yumm! Shared foo(d): {food}
+    Shared Foo1
   </div>
 
 export default Foo1;

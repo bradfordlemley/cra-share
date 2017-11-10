@@ -24,10 +24,12 @@ monorepo
        |--file1.js: import comp1 from ‘comp1’ ← ok, shared/comp1
        |--file2.js: import comp1 from ‘../../shared/comp1’  ← naughty, fails
   |--cra-app2
-     |--package.json: srcPaths: [“../shared”]
+     |--package.json: srcPaths: [“../shared”, "./packages"]
      |--src
        |--file1.js: import comp1 from ‘comp1’ ← ok, shared/comp1
-       |--file2.js: import comp1 from ‘../../shared/comp1’  ← naughty, fails
+       |--file2.js: import comp3 from ‘comp3’ ← ok, packages/comp3
+     |--packages
+       |--comp3
   |--shared
     |--comp1
     |--comp2
@@ -86,7 +88,3 @@ monorepo
 #### Todo
 1. Update ModuleScopePlugin to handle srcPaths in same way it handles appSrc (fail if relative import outside srcPath)
 1. Check for overlapping srcPaths
-
-
-
-
