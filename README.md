@@ -1,6 +1,8 @@
 #### TLDR;
 This repo demonstrates a proposal ([3436](http://github.com/facebookincubator/create-react-app/issues/3436)) for a source sharing feature in create-react-app.
 
+See [How to use in your own app](#how-to-use-in-your-own-app) section for instructions.
+
 #### Desired monorepo structure
 <pre>
 monorepo
@@ -35,21 +37,22 @@ monorepo
     |--comp2
 </pre>
 
-#### Notes
-* srcPaths are specified in package.json.
-* Modules under srcPaths can be included via absolute imports.
-  * Attempting to include via relative import will fail.
-* Modules included via srcPaths are treated the same as files under /src
+#### Description
+* srcPaths are specified in the CRA app's package.json.
+* srcPaths are treated the same as /src
   * Transpiled using same config (.babelrc under srcPath is not honored)
-  * Do not have their own dependencies (ie. do not have their own node_modules)
+  * **Do not have their own dependencies** (ie. do not have their own node_modules)
   * All dependencies must be included in app’s package.json / node_modules
-  * All tests are included
+  * All jest tests are included
+* Modules under srcPaths are included in CRA app via absolute imports.
+  * Including via relative import fails, same as standard CRA
 * Overlapping srcPaths are not allowed, e.g. [“../shared”, “../shared/comp1”]
   * This is to avoid confusion, to keep resolution something easy to reason about.
-* srcPaths *should* be relative ... but they don't really need to be.
+  * This is not yet enforced, but it will be in the future, so don't do it.
+* srcPaths are paths relative to app root (where package.json is) ... they can be absolute paths, too, but relative paths are the obvious choice for monorepos.
 * Resolve order is same as order of srcPaths.
 
-#### Implementation
+#### Implementation (fork of CRA)
 * https://github.com/bradfordlemley/create-react-app/tree/feature-srcPaths
 * https://github.com/bradfordlemley/create-react-app/commit/709dc407e2855f5dbdd982bde19dc0141e0d8e7c
 
