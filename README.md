@@ -61,7 +61,7 @@ monorepo
 1. npm install  <-- install react-scripts dependencies
 1. npm link  <-- tell your npm that you might want to use this version of react-scripts somewhere
 
-#### Try this example
+#### How to try this example
 1. Install react-scripts with srcPaths support as described above
 1. git clone https://github.com/bradfordlemley/cra-share
 1. Run app 1
@@ -77,7 +77,7 @@ monorepo
    1. npm start  <-- run app 2
    1. npm start|test|build|anything else that you can normally do with a create-react-app
 
-#### Or...try using srcPaths in your own app
+#### How to use in your own app
 Note: your app needs to be compatible with react-scripts v1.0.17, because this react-scripts w/ srcPaths support is forked from v1.0.17.
 
 1. Install react-scripts with srcPaths support as described above
