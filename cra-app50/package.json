@@ -1,8 +1,10 @@
 {
-  "name": "cra-testapp",
+  "name": "cra-app3",
+  "description": "app with lint",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "lodash": "^4.17.4",
     "react": "^16.1.0",
     "react-dom": "^16.1.0"
   },
@@ -12,7 +14,12 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
+    "build:ci": "CI=true npm run build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
-  }
+  },
+  "srcPaths": [
+    "../shared",
+    "./packages"
+  ]
 }
